@@ -9,25 +9,45 @@
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <script src="js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<style>
+    .banner{
+      height: 55vh;
+      background: url(bg1.png);
+      background-size: cover;
+      background-position: center;
+    }
+    .banner-countent{
+      height: 100%;
+      color:  #8851a1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .background{
+      background-color: #8ed3f5;
+    }
+</style>
+<body style="background-color: #fcfeff;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #eaf7fe;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">JobHub</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand">
+        <img style="max-height: 30px;" src="bagianats.png"  ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="font-family: Rubik Medium;">
+          <li class="nav-item" style="color: #514f50;">
+            <a class="nav-link active" aria-current="page" href="#" >Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Komunikasi</a>
+            <a class="nav-link" href="#" style="color: #838484;">Komunikasi</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu
-            </a>
+          <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+            aria-expanded="false" style="color: #838484;">Menu</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Melamar Pekerjaan</a></li>
               <li><a class="dropdown-item" href="#">Posting Proyek</a></li>
@@ -36,9 +56,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Masuk</a>
-            <a class="nav-link" href="register.html">Daftar</a>
+            <a class="nav-link" href="login.html" style="color: #838484;">Masuk</a> 
           </li>
+         </li class="nav-item">
+            <a class="nav-link" href="register.html"style="color: #838484;">Daftar</a>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -47,32 +68,63 @@
       </div>
     </div>
   </nav>
-  <style>
-    .container {
-      display: grid;  
-      place-items: center;
-      
-    }
-    .container img {
-    width: 300px; 
-    height: auto; 
-  }
-  </style>
-  <div class="container">
-    <img src="icon.png" alt="Gambar">
+  <!-- Banner -->
+  <div class="container-fluid banner">
+    <div class="container banner-countent col-lg-6">
+      <div>
+        <p class="fs-1 text-center" style="font-family: Bowlby One SC;">
+          Selamat Datang di JOBHUB
+        </p>
+        <p class="lh-sm text-center d-sm-block" >
+          Temukan peluang menarik dan kembangkan kariermu di JobHub,serta selesaikan proyek-proyek Anda dengan mudah 
+          dan rasakan kebebasan, fleksibilitas, dan penghasilan yang pantas!
+        </p>
+      </div>
+    </div>
   </div>
-  <h1>Selamat Datang di Project JobHub</h1>
-  <p>Project JobHub adalah sebuah aplikasi inovatif yang bertujuan untuk menyediakan platform yang menghubungkan antara pengguna dengan freelancer yang berkualitas tinggi di berbagai bidang pekerjaan. Aplikasi ini dirancang untuk memudahkan pengguna dalam mencari pekerja lepas yang sesuai dengan kebutuhan mereka, sekaligus memberikan peluang kerja kepada para freelancer yang mencari proyek.</p>
-  <h2>Fitur Utama Project JobHub:</h2>
-  <ul>
-    <li>Pencarian Freelancer: Pengguna dapat mencari freelancer berdasarkan bidang keahlian, lokasi, atau kriteria lain yang diinginkan.</li>
-    <li>Posting Proyek: Pengguna dapat memposting proyek yang mereka butuhkan dan mengundang freelancer untuk mengajukan penawaran.</li>
-    <li>Penawaran Freelancer: Freelancer dapat mengajukan penawaran untuk proyek yang mereka minati dan memperlihatkan keahlian serta pengalaman mereka.</li>
-    <li>Pemilihan Freelancer: Pemilik proyek dapat melihat penawaran yang masuk dan memilih freelancer yang paling sesuai dengan kebutuhan proyek.</li>
-    <li>Komunikasi dan Kolaborasi: Pemilik proyek dan freelancer dapat berkomunikasi dan berkolaborasi melalui pesan internal di aplikasi.</li>
-    <li>Reputasi dan Ulasan: Freelancer dapat meningkatkan reputasi mereka dengan mendapatkan ulasan positif dari pemilik proyek yang mereka kerjakan.</li>
-    <li>Pembayaran Aman: Aplikasi JobHub menyediakan sistem pembayaran yang terintegrasi dan aman untuk memfasilitasi pembayaran antara pemilik proyek dan freelancer.</li>
-    <li>Dukungan Pelanggan: Aplikasi JobHub menyediakan dukungan pelanggan yang responsif untuk membantu pengguna dalam mengatasi masalah atau pertanyaan terkait proyek atau transaksi.</li>
-  </ul>
+  <!-- According -->
+  <div class="my-2 container col-7">
+    <h2 class="text-center mb-4" style="color: #87689a; font-family: Bowlby One SC; font-size: 20pt;">
+      FITUR UNGGULAN DI JOBHUB</h2>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne" style="font-family: Rubik Medium;" >
+          <button class="accordion-button collapsed" style="background-color: #d3c5e1;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Komunikasi dan Kolaborasi
+          </button>
+        </h2>
+        <div id="flush-collapseOne" style="background-color: #eaf7fe;" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body" style="font-weight: Rubik Medium;"><strong> Proyek dan freelancer</strong> dapat berkomunikasi dan berkolaborasi melalui pesan internal di aplikasi</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingtwo" style="font-family: Rubik Medium;" >
+          <button class="accordion-button collapsed" style="background-color: #d3c5e1;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
+            Pembayaran Aman
+          </button>
+        </h2>
+        <div id="flush-collapsetwo" style="background-color: #eaf7fe;" class="accordion-collapse collapse" aria-labelledby="flush-headingtwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body" style="font-weight: Rubik Medium;"><strong> sistem pembayaran yang terintegrasi dan aman</strong> untuk memfasilitasi pembayaran antara pemilik proyek dan freelancer.</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingthree" style="font-family: Rubik Medium;" >
+          <button class="accordion-button collapsed" style="background-color: #d3c5e1;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethree" aria-expanded="false" aria-controls="flush-collapsethree">
+            Dukungan Pelanggan
+          </button>
+        </h2>
+        <div id="flush-collapsethree" style="background-color: #eaf7fe;" class="accordion-collapse collapse" aria-labelledby="flush-headingthree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body" style="font-weight: Rubik Medium;"><strong> Pelanggan yang responsif</strong> untuk membantu pengguna dalam mengatasi masalah atau pertanyaan terkait proyek atau transaksi.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end According -->
+ 
 </body>
 </html>
+
