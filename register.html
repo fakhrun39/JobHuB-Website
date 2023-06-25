@@ -1,24 +1,115 @@
 <!DOCTYPE html>
 <html>
-    <link href="css/bootstrap-reboot.min.css" rel="stylesheet" >
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .head {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+    }
+    .navbar {
+            background-color: #333;
+            height: 50px;
+    }
+    .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+    }
+
+    .navbar li {
+            margin-right: 10px;
+    }
+
+    .navbar li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+    }
+
+        .navbar li a:hover {
+            background-color: #555;
+    }
+</style>
 <head>
     <title>Halaman Register</title>
+    <div class="navbar">
+      <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="komunitas.html">Komunitas</a></li>
+          <li><a href="komunikasi.html">Hubungi Kami</a></li>
+      </ul>
 </head>
 <body>
+  <h2>Halaman Register</h2>
     <form action="register.php" method="POST">
-        <div class="mb-3">
-          <label for="Email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div class="mb-3">
-          <label for="username" class="form-label">Username:</label>
-          <input type="text" id="username" class="form-control" name="username" required><br><br>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password:</label>
-          <input type="password" class="form-control" id="password" name="password" required><br><br>
-          <input type="submit"  class="btn btn-primary" value="Register">
+      <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="nama@contoh.com" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <span class="error-message" class="body">Masukkan alamat email yang valid.</span>
+      </div>
+      <label for="username" class="form-label">Username:</label>
+      <input type="text" class="form-control" id="username" name="username" required><br><br>
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" id="password" class="form-control name="password" required><br><br>
+      <input type="submit" value="register" class="btn-primary">
+      <p>sudah punya akun?<a href="login.html">login</a></p>
     </form>
+    <script>
+      const emailInput = document.getElementById("email");
+      const errorMessage = document.querySelector(".error-message");
+
+      emailInput.addEventListener("input", function() {
+          if (emailInput.validity.valid) {
+              errorMessage.style.display = "none";
+          } else {
+              errorMessage.style.display = "block";
+          }   
+      });
+  </script>
 </body>
 </html>

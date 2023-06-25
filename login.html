@@ -76,18 +76,17 @@
     }
 </style>
 <title>Halaman Login</title>
-
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="komunitas.html">Komunitas</a></li>
+        <li><a href="komunikasi.html">Hubungi Kami</a></li>
+    </ul>
 <head>
     <title>Halaman Login</title>
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="komunitas.html">Komunitas</a></li>
-            <li><a href="komunikasi.html">Hubungi Kami</a></li>
-        </ul>
-    <h2>Halaman Register</h2>
+    <h2>Halaman Login</h2>
     <form action="login.php" method="POST">
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
@@ -98,7 +97,8 @@
         <input type="text" class="form-control" id="username" name="username" required><br><br>
         <label for="password" class="form-label">Password:</label>
         <input type="password" id="password" class="form-control name="password" required><br><br>
-        <input type="submit" value="Register" class="btn-primary">
+        <input type="submit" value="Login" class="btn-primary">
+        <p>belum punya akun?<a href="register.html">register</a></p>
     </form>
     <script>
         const emailInput = document.getElementById("email");
