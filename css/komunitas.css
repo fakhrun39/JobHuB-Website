@@ -1,0 +1,51 @@
+html,
+
+body{
+    height: 100%;
+    background-color: #e6e3ed;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #d3c5e1;
+    height: 60px;
+}
+.navbar ul {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.navbar li {
+    margin-right: 10px;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+.navbar li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar li a:hover {
+    background-color: #572f8b;
+    border-radius: 15px;
+}
+
+/* Komunitas */
+.a-font{
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 45pt;
+    color: #572f8b !important;
+}
+
+.b-font{
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 12pt;
+    color: #1f1b24 !important;
+}
