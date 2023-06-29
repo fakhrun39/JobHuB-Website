@@ -4,6 +4,25 @@ body{
     background-color: #fcfeff;
 }
 
+/* Navbar */
+
+.navbar li {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.navbar li a {
+  display: block;
+  color: #0f0f0f !important;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar li a:hover {
+  background-color: #caa4fd !important;
+  border-radius: 15px;
+}
+
+/* Banner */
 .banner-countent{
     height: 100%;
     color:  #8851a1;
