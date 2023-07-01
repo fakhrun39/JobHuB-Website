@@ -13,7 +13,7 @@ if (!$conn) {
 // Mendapatkan data dari formulir register
 $username = $_POST['username'];
 $password = $_POST['password'];
-
+$email = $_POST['email'];
 // Memeriksa apakah username sudah digunakan
 $query = "SELECT * FROM users WHERE username = '$username'";
 $result = mysqli_query($conn, $query);
@@ -23,13 +23,13 @@ if (mysqli_num_rows($result) > 0) {
     echo "Username sudah terdaftar. Silakan gunakan username lain.";
 } else {
     // Menambahkan pengguna baru ke tabel users
-    $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+    $query = "INSERT INTO users (username,email, password) VALUES ('$username','$email' '$password')";
     if (mysqli_query($conn, $query)) {
         // Registrasi berhasil
-        echo "Registrasi berhasil. Silakan login dengan akun baru.";
+         echo '<script>alert("Registrasi berhasil. Silakan login dengan akun baru."); window.location.href = "dashboard.html";</script>'; // Redirect ke dashboard.html setelah menampilkan notifikasi berhasil
     } else {
         // Registrasi gagal
-        echo "Registrasi gagal. Silakan coba lagi.";
+        echo '<script>alert("Registrasi gagal. Silakan coba lagi."); window.location.href = "register.html";</script>'; // Redirect kembali ke halaman register.html setelah menampilkan notifikasi gagal
     }
 }
 
